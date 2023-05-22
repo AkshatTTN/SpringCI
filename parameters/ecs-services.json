@@ -1,4 +1,8 @@
-[
+[  
+  {
+    "ParameterKey": "ImageUrl",
+    "ParameterValue": "url"
+  },
   {
     "ParameterKey": "ExportClusterStackName",
     "ParameterValue": "ecs-cluster"
