@@ -1,2 +1,3 @@
 commit?
 do it
+deploy
