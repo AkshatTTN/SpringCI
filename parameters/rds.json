@@ -9,7 +9,7 @@
   },
   {
     "ParameterKey": "ExportVpcStackName",
-    "ParameterValue": "myvpc"
+    "ParameterValue": "vpc"
   },
   {
     "ParameterKey": "DBInstanceIdentifier",
