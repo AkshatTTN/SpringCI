@@ -85,18 +85,6 @@ Resources:
       CidrBlock: !Select [ 3, !Cidr [ !Ref VpcCidr, 12, 8 ] ]
       MapPublicIpOnLaunch: False
       AvailabilityZone: us-east-1b
-
-  RouteTable:
-    Type: AWS::EC2::RouteTable
-    Properties:
-      VpcId: !Ref Vpc
-  Route:
-    Type: AWS::EC2::Route
-    DependsOn: InternetGateway
-    Properties:
-      RouteTableId: !Ref RouteTable
-      DestinationCidrBlock: 0.0.0.0/0
-      GatewayId: !Ref InternetGateway
   SubnetRouteTableAssociation1:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
@@ -230,22 +218,6 @@ Resources:
           CidrIp:
             Ref: SSHLocation
       VpcId: !Ref Vpc
-  WebServerSecurityGroup:
-    Type: AWS::EC2::SecurityGroup
-    Properties:
-      GroupDescription: Enable HTTP access via port 80
-      SecurityGroupIngress:
-        - IpProtocol: tcp
-          FromPort: '0'
-          ToPort: '61000'
-          SourceSecurityGroupId: !Ref ELBWebServerSecurityGroup
-        - IpProtocol: tcp
-          FromPort: '22'
-          ToPort: '22'
-          CidrIp:
-            Ref: SSHLocation
-      VpcId: !Ref Vpc
-
 
   DataBaseSecurityGroup:
     Type: "AWS::EC2::SecurityGroup"
