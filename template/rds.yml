@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: '2010-09-09'
 
-Description: creates an RDS database with MYSQL engine.
+Description: creates an RDS databaase with MYSQL engine.
   
 Parameters:
   ExportVpcStackName:
