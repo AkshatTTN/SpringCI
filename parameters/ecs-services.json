@@ -1,15 +1,15 @@
 [
   {
     "ParameterKey": "ExportClusterStackName",
-    "ParameterValue": "mycluster"
+    "ParameterValue": "ecs-cluster"
   },
   {
     "ParameterKey": "ExportVpcStackName",
-    "ParameterValue": "myvpc"
+    "ParameterValue": "vpc"
   },
   {
     "ParameterKey": "ExportRDSStackName",
-    "ParameterValue": "myrds"
+    "ParameterValue": "rds"
   },
   {
     "ParameterKey": "ServiceName",
