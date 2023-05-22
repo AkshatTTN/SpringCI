@@ -1,5 +1,5 @@
 
-Description: vpc with public and private subnets 
+Description: vpc with public and private sub 
 
 Parameters:
   VpcCidr:
