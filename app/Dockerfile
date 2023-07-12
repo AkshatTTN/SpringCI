@@ -1,7 +1,7 @@
 FROM openjdk:8
-
-COPY /app/pom.xml /tmp/
-COPY src /tmp/src/
+WORKDIR /tmp/
+COPY pom.xml /tmp/
+COPY src/ /tmp/src/
 RUN ls
 WORKDIR /tmp/
 
